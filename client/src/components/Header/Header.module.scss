@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+//fonts
+$ubuntu-400: 'Ubuntu', sans-serif;
+
+
+
+.headerWrapper {
+  display: flex;
+  font-size: 18px;
+  padding-top: 18px;
+  background-color: #F7F7F7;;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  color: #fff;
+
+  .logo {
+    display: flex;
+    margin-left: 183px;
+  }
+
+
+  .navWrapper {
+    .navigation,
+    .navigation a,
+    .navigation a:hover,
+    .navigation a:focus {
+      margin-left: 51px;
+      color: #000000;
+      padding-bottom: 18px;
+      text-decoration: none;
+    }
+  }
+}
+
+.active {
+  border-bottom: 4px solid #19A9E0;
+}
