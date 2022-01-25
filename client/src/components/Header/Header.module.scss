@@ -12,7 +12,7 @@ $ubuntu-400: 'Ubuntu', sans-serif;
   background-color: #F7F7F7;;
   flex-direction: row;
   text-align: center;
-  align-items: center;
+  font-family: $ubuntu-400;
   color: #fff;
 
   .logo {
@@ -22,14 +22,32 @@ $ubuntu-400: 'Ubuntu', sans-serif;
 
 
   .navWrapper {
+    //a scratch margin to center the nav with the icon because i've started getting mad of it
+    margin-top: 10px;
     .navigation,
-    .navigation a,
-    .navigation a:hover,
-    .navigation a:focus {
-      margin-left: 51px;
+    .navigation a {
       color: #000000;
-      padding-bottom: 18px;
       text-decoration: none;
+      margin-left: 51px;
+      position: relative;
+      padding-bottom: 18px;
+    }
+
+    .navigation a:after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: -4px;
+      content: "";
+      display: block;
+      height: 4px;
+      left: 50%;
+      position: absolute;
+      background: #19A9E0;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+    a:hover:after {
+      width: 100%;
+      left: 0;
     }
   }
 }

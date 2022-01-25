@@ -10,7 +10,7 @@ const Header = () => {
         <nav className={styles.headerWrapper}>
             <div className={styles.logo}>
                 <NavLink to="/" >
-                    <PickAways />
+                        <PickAways />
                 </NavLink>
             </div>
             <div className={styles.navWrapper}>
