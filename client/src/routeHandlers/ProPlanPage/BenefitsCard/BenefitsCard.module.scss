@@ -6,15 +6,13 @@
   background-color: $white-primary;
   margin: 12px;
   border-radius: 10px;
-  font-family: $ubuntu-font;
-  font-weight: 400;
-  font-size: 20px;
+
+  @include generateText(black,400,20px);
 }
 
 .card p {
-  color: $gray-text;
+  @include generateText($gray-text,400,10px);
   padding:0 43px;
-  font-size: 10px;
 }
 
 .logo {

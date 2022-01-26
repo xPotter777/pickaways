@@ -18,20 +18,14 @@
 .proPlanTitle {
   width: auto;
   height: auto;
-  color: $blue-primary;
-  font-family: $ubuntu-font;
-  font-weight: 700;
+  @include generateText($blue-primary,700,180px);
   text-transform: uppercase;
-  font-size: 180px;
 }
 
 .proPlanLabel {
   align-self: center;
-  font-family: $ubuntu-font;
-  font-weight: 400;
-  font-size: 16px;
+  @include generateText($gray-text,400,16px);
   width: 730px;
-  color: $gray-text;
 }
 
 .bottomPartWrapper {
@@ -52,10 +46,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  font-family: $ubuntu-font;
-  font-weight: 400;
-  font-size: 16px;
-  color: $gray-text;
+  @include generateText($gray-text,400,16px);
 }
 
 

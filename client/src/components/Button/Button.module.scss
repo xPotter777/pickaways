@@ -1,17 +1,13 @@
 @import './src/assets/variables';
 
 .button {
-  background-color: $blue-primary;
   border: none;
   border-radius: 10px;
   width: 190px;
   height: 40px;
   color: white;
-  font-family: $ubuntu-font;
-  font-weight: 400;
-  font-size: 16px;
   transition: 0.3s;
-
+  @include generateText( $blue-primary,400,16px);
 }
 
 .button:hover {

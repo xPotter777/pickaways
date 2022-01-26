@@ -1,0 +1,18 @@
+@import "./src/assets/variables";
+
+.faqSection {
+  width: 50%;
+  flex-direction: column;
+  margin: auto auto 24px;
+}
+
+.faqQuestion {
+  display: flex;
+  margin-bottom: 16px;
+  @include generateText($blue-primary, 400, 22px);
+}
+
+.faqText {
+  display: flex;
+  @include generateText($gray-text, 400, 16px);
+}

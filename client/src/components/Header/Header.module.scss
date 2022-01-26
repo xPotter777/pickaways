@@ -2,14 +2,11 @@
 
 .headerWrapper {
   display: flex;
-  font-size: 18px;
   padding-top: 18px;
   background-color: $white-primary;
   flex-direction: row;
   justify-content: space-between;
   text-align: center;
-  font-family: $ubuntu-font;
-  font-weight: 400;
   color: #fff;
 
   .logo {
@@ -27,7 +24,7 @@
     //a scratch margin to center the nav with the icon because i've started getting mad of it
     .navigation ,
     .navigation a {
-      color: #000000;
+      @include generateText(black,400,18px);
       text-decoration: none;
       margin-left: 51px;
       position: relative;

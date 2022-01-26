@@ -2,10 +2,18 @@
 //fonts
 $ubuntu-font: 'Ubuntu', sans-serif;
 
+@mixin generateText ($color, $font-weight, $font-size) {
+    font-family: $ubuntu-font;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    color: $color;
+}
+
 //colors
 $blue-primary : #19A9E0;
 $white-primary: #F7F7F7;
-$gray-text:  #6D6D6D;
+$gray-text: #6D6D6D;
+
 
 
 
