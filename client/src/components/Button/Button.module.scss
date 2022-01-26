@@ -1,0 +1,27 @@
+@import './src/assets/variables';
+
+.button {
+  background-color: $blue-primary;
+  border: none;
+  border-radius: 10px;
+  width: 190px;
+  height: 40px;
+  color: white;
+  font-family: $ubuntu-font;
+  font-weight: 400;
+  font-size: 16px;
+  transition: 0.3s;
+
+}
+
+.button:hover {
+  background-color:white;
+  color: $blue-primary;
+  border: $blue-primary 2px solid;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 12px;
+}
+
+.button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}

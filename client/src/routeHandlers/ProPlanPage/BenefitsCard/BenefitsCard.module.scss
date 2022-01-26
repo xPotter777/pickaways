@@ -1,0 +1,24 @@
+@import './src/assets/variables';
+
+.card {
+  width: 250px;
+  height: 270px;
+  background-color: $white-primary;
+  margin: 12px;
+  border-radius: 10px;
+  font-family: $ubuntu-font;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.card p {
+  color: $gray-text;
+  padding:0 43px;
+  font-size: 10px;
+}
+
+.logo {
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}

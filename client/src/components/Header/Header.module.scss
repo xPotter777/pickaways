@@ -1,36 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-
-//fonts
-$ubuntu-400: 'Ubuntu', sans-serif;
-
-
+@import './src/assets/variables';
 
 .headerWrapper {
   display: flex;
   font-size: 18px;
   padding-top: 18px;
-  background-color: #F7F7F7;;
+  background-color: $white-primary;
   flex-direction: row;
+  justify-content: space-between;
   text-align: center;
-  font-family: $ubuntu-400;
+  font-family: $ubuntu-font;
+  font-weight: 400;
   color: #fff;
 
   .logo {
     display: flex;
     margin-left: 183px;
+    vertical-align: center;
   }
 
 
   .navWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
     //a scratch margin to center the nav with the icon because i've started getting mad of it
-    margin-top: 10px;
-    .navigation,
+    .navigation ,
     .navigation a {
       color: #000000;
       text-decoration: none;
       margin-left: 51px;
       position: relative;
       padding-bottom: 18px;
+      vertical-align: -webkit-baseline-middle;
     }
 
     .navigation a:after {
@@ -41,7 +43,7 @@ $ubuntu-400: 'Ubuntu', sans-serif;
       height: 4px;
       left: 50%;
       position: absolute;
-      background: #19A9E0;
+      background: $blue-primary;
       transition: width 0.3s ease 0s, left 0.3s ease 0s;
       width: 0;
     }
@@ -53,5 +55,12 @@ $ubuntu-400: 'Ubuntu', sans-serif;
 }
 
 .active {
-  border-bottom: 4px solid #19A9E0;
+  border-bottom: 4px solid $blue-primary;
+}
+
+.iconsWrapper {
+  display: flex;
+  margin-left: 500px;
+  width: 100px;
+  justify-content: space-between;
 }
