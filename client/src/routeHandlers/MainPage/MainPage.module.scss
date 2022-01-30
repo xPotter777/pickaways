@@ -1,0 +1,43 @@
+@import "./src/assets/variables";
+
+.mainPageWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.proPlanSubscriptionWrapper {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    background-color: $white-primary;
+    width: 1125px;
+    margin-top: 22px;
+    border-radius: 10px;
+}
+
+.proPlanLabel {
+    display: flex;
+    align-self: center;
+    justify-content: flex-start;
+    width: 1200px;
+    margin-top: 36px;
+    @include generateText(black,400,32px)
+}
+
+.paymentDetailsWrapper {
+    @include proPlanSubscriptionSection
+}
+
+.notificationSwitchersWrapper {
+    @include proPlanSubscriptionSection
+}
+
+.subscriptionButtonWrapper {
+ @include proPlanSubscriptionSection;
+    .subscriptionTitle {
+        @include generateText($gray-text-secondary,400,12px)
+        margin-top: 15px;
+    }
+}
+

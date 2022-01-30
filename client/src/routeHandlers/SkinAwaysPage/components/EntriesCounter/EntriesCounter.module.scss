@@ -1,0 +1,27 @@
+@import '../../../../assets/variables';
+
+.entriesCounter {
+  padding: 15px 0;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 1000px;
+  height: 60px;
+  line-height: 60px;
+  span {
+    margin: 0 5px;
+  }
+  svg {
+    display: block;
+    margin: auto 5px;
+  }
+}
+
+.countNumber {
+  @include generateText($blue-primary,700,18px)
+}
+
+.countLabel {
+  @include generateText(black,400,18px)
+}

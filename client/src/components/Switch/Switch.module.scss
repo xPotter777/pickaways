@@ -1,0 +1,102 @@
+@import "./src/assets/variables";
+
+
+.switch {
+  height: 24px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  input {
+    display: none;
+    & + span {
+      padding-left: 50px;
+      min-height: 24px;
+      line-height: 24px;
+      display: block;
+      color: #ccc;
+      position: relative;
+      vertical-align: middle;
+      white-space: nowrap;
+      transition: color .3s ease;
+      &:before,
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        border-radius: 12px;
+      }
+      &:before {
+        top: 0;
+        left: 0;
+        width: 42px;
+        height: 24px;
+        background: #E4ECFA;
+        transition: all .3s ease;
+      }
+      &:after {
+        width: 18px;
+        height: 18px;
+        background: #fff;
+        top: 3px;
+        left: 3px;
+        box-shadow: 0 1px 3px rgba(#121621, .1);
+        transition: all .45s ease;
+      }
+      strong {
+        font-weight: normal;
+        position: relative;
+        display: block;
+        &:before,
+        &:after {
+
+          @include generateText($gray-text,400,14px);
+          display: block;
+          -webkit-backface-visibility: hidden;
+        }
+        &:before {
+          content: 'OFF';
+          transition: all .3s ease .2s;
+        }
+        &:after {
+          content: 'ON';
+          opacity: 0;
+          visibility: hidden;
+          position: absolute;
+          left: 0;
+          top: 0;
+          color: $blue-primary;
+          transition: all .3s ease;
+          transform: translate(2px, 0);
+        }
+      }
+    }
+    &:checked {
+      & + span {
+        &:before {
+          background: rgba($blue-primary, .35);
+        }
+        &:after {
+          background: #fff;
+          transform: translate(18px, 0);
+        }
+
+        strong {
+          &:before {
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s ease;
+            transform: translate(-2px, 0);
+          }
+          &:after {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0, 0);
+            transition: all .3s ease .2s;
+          }
+        }
+      }
+    }
+  }
+}
+
+

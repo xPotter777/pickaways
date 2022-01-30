@@ -1,0 +1,18 @@
+@import "../../../../assets/variables";
+
+.emptyEntriesWrapper {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  text-align: center;
+  width: 330px;
+  height: auto;
+  @include generateText($gray-text,400,18px);
+  span {
+    margin-top: 10px;
+  }
+  svg {
+    display: block;
+    margin: auto;
+  }
+}

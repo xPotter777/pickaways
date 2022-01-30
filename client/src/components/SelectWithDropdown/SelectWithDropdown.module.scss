@@ -1,0 +1,56 @@
+@import "src/assets/variables";
+
+.selectDropdown{
+  display: flex;
+  @include generateText(black,400,18px);
+  flex-direction: row;
+  margin-left: 40px;
+  padding-top: 16px;
+  position: relative;
+  min-width: 420px;
+  white-space: nowrap;
+
+  .dropdownWrapper {
+    margin-top: 5px;
+  }
+
+  .dropdown {
+    width: 160px;
+    position: absolute;
+    top: 50px;
+    height: 110px;
+    border-radius: 10px;
+    @include generateText($gray-text-secondary,400,16px);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    background-color: $dark-white;
+    padding: 14px 14px 14px;
+    span {
+      margin: 5px 0;
+      &:hover {
+        color: $blue-primary;
+      }
+    }
+  }
+  svg {
+    margin-left: 5px;
+    margin-top: 10px;
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.appliedFiltersWrapper {
+  background-color: $dark-white;
+  margin-left: 10px;
+  @include generateText($blue-primary,400,18px);
+  height: 30px;
+  border-radius: 10px;
+  line-height: 30px;
+  margin-top: 4px;
+
+  span {
+    margin: 0 10px;
+  }
+}

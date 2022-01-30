@@ -9,11 +9,70 @@ $ubuntu-font: 'Ubuntu', sans-serif;
     color: $color;
 }
 
+@mixin proPlanSubscriptionSection {
+    display: flex;
+    width: 280px;
+    flex-direction: column;
+    padding: 40px 55px;
+}
+
+@mixin generateButton ($color) {
+    border: none;
+    border-radius: 10px;
+    width: 190px;
+    height: 40px;
+    background-color:$color;
+    transition: 0.3s;
+    @include generateText( white,400,16px);
+
+    &:hover {
+        background-color:white;
+        color: $color;
+        border: $color 2px solid;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 8px 12px;
+    }
+
+    &:active {
+        box-shadow: none;
+        transform: translateY(0);
+    }
+}
+
 //colors
 $blue-primary : #19A9E0;
+$blue-secondary: #109DD3;
 $white-primary: #F7F7F7;
+$white-secondary: #F9F9F9;
 $gray-text: #6D6D6D;
+$gray-text-secondary: #848484;
+$red-primary: #F4ABAB;
+$dark-white: #EDEAEA;
+$light-grey: #AAAAAA;
 
 
+
+%label {
+    background-color: $blue-secondary;
+    margin: 5px 0;
+    border-radius: 6px;
+    text-align: center;
+    display: flex;
+    padding: 0 10px 0 20px;
+    flex-direction: row;
+    height: 40px;
+    line-height: 40px;
+    svg {
+        display: block;
+        margin: auto 10px auto 0;
+    }
+    img {
+        margin: auto;
+    }
+    p {
+        @include generateText(#ffffff, 700, 12px);
+        opacity: 40%;
+        margin-right: 10px;
+    }
+}
 
 

@@ -1,0 +1,74 @@
+@import "../../../../assets/variables";
+
+.card {
+  width: 490px;
+  height: 170px;
+  margin: 30px 15px;
+  background-color: $blue-primary;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: row;
+  padding: 26px;
+}
+
+.cardLabelsWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  @include generateText(white, 400, 16px);
+}
+
+.cardLabel {
+  @extend %label;
+  width: 140px;
+}
+
+.cardLabelUsername {
+  @extend %label;
+  width: 190px;
+}
+
+.cardImageWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 25px;
+  position: relative;
+}
+
+.infoWeaponName {
+  @include generateText(#fff, 400, 16px);
+}
+
+.infoWeaponSkin {
+  @include generateText(#fff, 400, 20px);
+}
+
+.weaponInfoWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 120px;
+  z-index: 12;
+  position: absolute;
+}
+
+.hearth {
+  width: 18px;
+  height: 18px;
+}
+
+.retweet {
+  width: 25px;
+  height: 25px;
+}
+
+.follow {
+  width: 23px;
+  height: 23px;
+}
+
+.weapon {
+  margin-top: 20px;
+  width: 230px;
+  height: 130px;
+}

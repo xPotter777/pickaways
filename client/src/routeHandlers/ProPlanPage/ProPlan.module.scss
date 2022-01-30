@@ -44,6 +44,7 @@
 .buttonWrapper {
   padding: 30px;
   display: flex;
+  align-self: center;
   justify-content: center;
   flex-direction: column;
   @include generateText($gray-text,400,16px);

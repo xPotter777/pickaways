@@ -1,0 +1,16 @@
+@import "./src/assets/variables";
+
+.input{
+  border:0;
+  width: 300px;
+  border-bottom:2px solid $gray-text;
+  background:transparent;
+  padding:8px 0 5px 0;
+  @include generateText($gray-text,400,18px);
+  transition: 0.5s;
+}
+.input:focus {
+  border:none;
+  outline:none;
+  border-bottom:2px solid $blue-primary;
+}

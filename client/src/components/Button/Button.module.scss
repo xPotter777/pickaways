@@ -1,23 +1,10 @@
 @import './src/assets/variables';
 
 .button {
-  border: none;
-  border-radius: 10px;
-  width: 190px;
-  height: 40px;
-  color: white;
-  transition: 0.3s;
-  @include generateText( $blue-primary,400,16px);
+@include generateButton($blue-primary);
 }
 
-.button:hover {
-  background-color:white;
-  color: $blue-primary;
-  border: $blue-primary 2px solid;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 12px;
-}
-
-.button:active {
-  box-shadow: none;
-  transform: translateY(0);
+.buttonWarning {
+  @include generateButton($red-primary);
+  width: 240px;
 }

@@ -1,0 +1,19 @@
+@import "./src/assets/variables";
+.details {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  .label {
+    width: 140px;
+    @include generateText($gray-text-secondary,400,18px);
+    &Black {
+      color: black;
+    }
+  }
+
+  .value {
+    @include generateText(black,400,18px);
+    margin-left: 14px;
+  }
+}
+

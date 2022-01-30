@@ -1,0 +1,117 @@
+@import "./src/assets/variables";
+
+.skinAwayPageWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.titleSectionWrapper {
+  @include generateText(black, 400, 32px);
+  margin-top: 20px;
+  margin-left: 450px;
+}
+
+.cardSlider {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  overflow: auto ;
+}
+
+.cardSlider::-webkit-scrollbar {
+  height: 7px;
+}
+
+.cardSlider::-webkit-scrollbar-thumb:horizontal{
+  background: $blue-primary;
+  border-radius: 10px;
+}
+
+.giveawaySectionWrapper {
+  display: flex;
+  align-self: center;
+  padding: 16px;
+  flex-direction: column;
+  width: 1125px;
+  height: 520px;
+  background-color: $white-secondary;
+  border-radius: 10px;//set to white-secondary
+  margin-top: 20px;
+}
+
+.giveawayFiltersWrapper {
+  display: flex;
+  padding: 0 60px;
+  flex-direction: row;
+  width: 1000px;
+}
+
+.buttonWrapper {
+  display: flex;
+  width: 275px;
+  button {
+    margin: auto;
+  }
+}
+
+.giveawayEntriesWrapper {
+  display: flex;
+  flex-direction: row;
+  width: 1000px;
+  height: 340px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  overflow-y: auto ;
+  align-self: center;
+}
+
+.giveawayEntriesWrapper::-webkit-scrollbar {
+  width: 10px;
+  left: -200px;
+  background-color: #F4F4F4;
+}
+
+.giveawayEntriesWrapper::-webkit-scrollbar-thumb:vertical{
+  background: $blue-secondary;
+  border-radius: 10px;
+  background-clip: content-box;
+  border: 5px solid $blue-secondary;
+  box-shadow: inset 12px 12px 15px $white-primary;
+}
+
+.verifySection {
+  display: flex;
+  align-self: center;
+  padding: 0 60px;
+  width: 1000px;
+  height: 80px;
+  line-height: 80px;
+}
+
+.inputWrapper {
+  display: flex;
+}
+
+.howItWorksWrapper {
+  min-width: 420px;
+  margin-left: 40px;
+  display: flex;
+  a {
+    text-decoration: none;
+    @include generateText(black,400,16px);
+  }
+}
+
+.verifyButtonWrapper {
+  width: 275px;
+  display: flex;
+  text-align: center;
+    button {
+      margin: auto;
+    }
+}
+
+

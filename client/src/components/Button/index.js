@@ -1,14 +1,18 @@
 import React from "react";
+import classNames from "classnames";
 
 import styles from "./Button.module.scss";
 
-const Button = ({ onClickAction, text }) => {
+const Button = ({ onClickAction, text, warning }) => {
   return (
-    <div>
-      <button className={styles.button} onClick={onClickAction}>
-        <span>{text}</span>
-      </button>
-    </div>
+    <button
+      className={classNames(styles.button, {
+        [styles.buttonWarning]: warning,
+      })}
+      onClick={onClickAction}
+    >
+      <span>{text}</span>
+    </button>
   );
 };
 
