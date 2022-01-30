@@ -1,63 +1,64 @@
-@import './src/assets/variables';
+@import "./src/assets/variables";
 
 .headerWrapper {
   display: flex;
-  padding-top: 18px;
   background-color: $white-primary;
   flex-direction: row;
   justify-content: space-between;
   text-align: center;
   color: #fff;
+}
 
-  .logo {
-    display: flex;
-    margin-left: 183px;
-    vertical-align: center;
+.logoWrapper {
+  display: flex;
+  width: 450px;
+  padding-left: 225px;
+  a {
+    display: block;
+    margin: auto;
   }
+}
 
+.navWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
-  .navWrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.navigation {
+  display: flex;
+}
 
-    //a scratch margin to center the nav with the icon because i've started getting mad of it
-    .navigation ,
-    .navigation a {
-      @include generateText(black,400,18px);
-      text-decoration: none;
-      margin-left: 51px;
-      position: relative;
-      padding-bottom: 18px;
-      vertical-align: -webkit-baseline-middle;
-    }
-
-    .navigation a:after {
-      background: none repeat scroll 0 0 transparent;
-      bottom: -4px;
-      content: "";
-      display: block;
-      height: 4px;
-      left: 50%;
-      position: absolute;
-      background: $blue-primary;
-      transition: width 0.3s ease 0s, left 0.3s ease 0s;
-      width: 0;
-    }
-    a:hover:after {
-      width: 100%;
-      left: 0;
-    }
-  }
+.navigation a {
+  @include generateText(black, 400, 18px);
+  text-decoration: none;
+  padding: 25px;
+  vertical-align: -webkit-baseline-middle;
 }
 
 .active {
   border-bottom: 4px solid $blue-primary;
 }
 
+.navigationRightPart {
+  display: flex;
+  padding-left: 225px;
+}
 .iconsWrapper {
   display: flex;
-  margin-left: 500px;
+  flex-direction: row;
+  padding: 20px;
   width: 100px;
   justify-content: space-between;
+  svg {
+    display: block;
+    margin: auto;
+  }
+}
+.loginButtonWrapper {
+  display: flex;
+  text-align: center;
+  button {
+    margin: auto;
+  }
 }
