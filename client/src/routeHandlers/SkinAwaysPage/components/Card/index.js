@@ -1,7 +1,9 @@
 import React from "react";
-import styles from "./Card.module.scss";
+
 import { ReactComponent as UserIconSmall } from "../../../../assets/img/user-icon-small.svg";
 import { ReactComponent as ClockIcon } from "../../../../assets/img/clock-icon.svg";
+
+import styles from "./Card.module.scss";
 
 const Card = ({
   username,

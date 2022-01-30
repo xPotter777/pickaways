@@ -1,6 +1,7 @@
 import React from "react";
-import styles from "./Details.module.scss";
 import classNames from "classnames";
+
+import styles from "./Details.module.scss";
 
 const Details = ({ value, children, withSwitch }) => {
   return (

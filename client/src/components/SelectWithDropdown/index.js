@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 import { ReactComponent as Triangle } from "../../assets/img/triangle.svg";
+import { ReactComponent as Cross } from "../../assets/img/cross.svg";
 
 import styles from "./SelectWithDropdown.module.scss";
-import { ReactComponent as Cross } from "../../assets/img/cross.svg";
 
 const SelectWithDropdown = ({ label, dropdownLabels }) => {
   const [isOpenDropdown, handleDropdown] = useState(false);
