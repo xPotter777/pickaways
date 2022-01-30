@@ -6,16 +6,17 @@ import { ReactComponent as TwitterIcon } from "../../assets/img/twitter-icon.svg
 import { ReactComponent as DiscordIcon } from "../../assets/img/discord-icon.svg";
 
 import styles from "./Header.module.scss";
+import Button from "../Button";
 
 const Header = () => {
   return (
     <nav className={styles.headerWrapper}>
       <div className={styles.navWrapper}>
-        <span className={styles.logo}>
+        <div className={styles.logoWrapper}>
           <NavLink to="/">
             <PickAways />
           </NavLink>
-        </span>
+        </div>
         <div className={styles.navigation}>
           <NavLink
             to="/"
@@ -48,9 +49,14 @@ const Header = () => {
             FAQ
           </NavLink>
         </div>
-        <div className={styles.iconsWrapper}>
-          <TwitterIcon />
-          <DiscordIcon />
+        <div className={styles.navigationRightPart}>
+          <div className={styles.loginButtonWrapper}>
+            <Button text="Sign in" />
+          </div>
+          <div className={styles.iconsWrapper}>
+            <TwitterIcon />
+            <DiscordIcon />
+          </div>
         </div>
       </div>
     </nav>
