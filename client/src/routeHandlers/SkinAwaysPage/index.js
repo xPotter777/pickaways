@@ -94,10 +94,15 @@ const SkinAwaysPage = () => {
       </div>
       <div className={styles.giveawaySectionWrapper}>
         <div className={styles.giveawayFiltersWrapper}>
-          <Input type="url" placeHolder="Tweet rl here..." />
+          <Input type="url" placeHolder="Tweet url here..." />
           <SelectWithDropdown
             label="Filter by"
-            dropdownLabels={["Like", "Comment", "Retweet", "Follow @___"]}
+            dropdownLabels={[
+              { id: 1, value: "Like" },
+              { id: 2, value: "Comment" },
+              { id: 3, value: "Retweet" },
+              { id: 3, value: "Follow" },
+            ]}
           />
           <div className={styles.buttonWrapper}>
             <Button text="Select winner" />

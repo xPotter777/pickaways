@@ -1,0 +1,20 @@
+@import "./src/assets/variables";
+
+.appliedFiltersWrapper {
+  background-color: $dark-white;
+  margin-left: 10px;
+  @include generateText($blue-primary, 400, 18px);
+  height: 30px;
+  border-radius: 10px;
+  line-height: 30px;
+  margin-top: 4px;
+
+  .icon:hover svg path {
+    transition: 0.5s;
+    stroke: black;
+  }
+}
+
+span {
+  margin: 0 10px;
+}
