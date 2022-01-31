@@ -31,6 +31,8 @@ const SelectWithDropdown = ({ label, dropdownLabels }) => {
     if (!appliedFilters.includes(filter) && appliedFilters.length < 3) {
       handleAppliedFilters((prevState) => [filter, ...prevState]);
       handleDropdown(false);
+    } else {
+      handleDropdown(false);
     }
   };
 
