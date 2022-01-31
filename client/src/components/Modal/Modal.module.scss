@@ -1,0 +1,53 @@
+@import "./src/assets/variables";
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: rgba(0,0,0,0.3);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modalContent {
+  width: 400px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  background-color: white;
+  padding: 30px;
+  transform: scale(0.5);
+  transition: 0.5s all;
+}
+
+.modalContentActive {
+  transform: scale(1);
+}
+
+.login{
+  @include generateText($blue-primary,700,16px)
+  margin-bottom: 5px;
+}
+.label{
+  margin-bottom: 22px;
+  @include generateText($gray-text,400,14px)
+}
+
+
+
+
+

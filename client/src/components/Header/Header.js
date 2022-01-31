@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+//context
+import { ModalContext } from "../../App";
+
+import Button from "../Button";
 
 import { ReactComponent as PickAways } from "../../assets/img/pickaways-logo.svg";
 import { ReactComponent as TwitterIcon } from "../../assets/img/twitter-icon.svg";
 import { ReactComponent as DiscordIcon } from "../../assets/img/discord-icon.svg";
 
 import styles from "./Header.module.scss";
-import Button from "../Button";
 
 const Header = () => {
+  const { setModalActive } = useContext(ModalContext);
+  console.log(setModalActive);
   return (
     <nav className={styles.headerWrapper}>
       <div className={styles.navWrapper}>
@@ -51,7 +56,7 @@ const Header = () => {
         </div>
         <div className={styles.navigationRightPart}>
           <div className={styles.loginButtonWrapper}>
-            <Button text="Sign in" />
+            <Button text="Sign in" onClickAction={setModalActive} />
           </div>
           <div className={styles.iconsWrapper}>
             <TwitterIcon />
