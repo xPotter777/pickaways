@@ -1,9 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-
-import { ReactComponent as Triangle } from "../../assets/img/triangle.svg";
-
-import styles from "./SelectWithDropdown.module.scss";
+import classNames from "classnames";
 import AppliedFilter from "./AppliedFilter";
+import { ReactComponent as Triangle } from "../../assets/img/triangle.svg";
+import styles from "./SelectWithDropdown.module.scss";
 
 const SelectWithDropdown = ({ label, dropdownLabels }) => {
   const [isOpenDropdown, handleDropdown] = useState(false);
@@ -45,16 +44,17 @@ const SelectWithDropdown = ({ label, dropdownLabels }) => {
         {label}
         <Triangle />
       </span>
-
-      {isOpenDropdown && (
-        <div className={styles.dropdown}>
-          {dropdownLabels.map(({ value, id }) => (
-            <span key={value + id} onClick={() => addFilter(value)}>
-              {value}
-            </span>
-          ))}
-        </div>
-      )}
+      <div
+        className={classNames(styles.dropdown, {
+          [styles.dropdownActive]: isOpenDropdown,
+        })}
+      >
+        {dropdownLabels.map(({ value, id }) => (
+          <span key={value + id} onClick={() => addFilter(value)}>
+            {value}
+          </span>
+        ))}
+      </div>
       {!!appliedFilters.length &&
         appliedFilters.map((value) => (
           <AppliedFilter value={value} key={value} onClick={removeFilter} />
