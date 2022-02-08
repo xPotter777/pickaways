@@ -40,12 +40,12 @@
 }
 
 .login{
-  @include generateText($blue-primary,700,16px)
+  @include generateText($blue-primary,700,16px);
   margin-bottom: 5px;
 }
 .label{
   margin-bottom: 22px;
-  @include generateText($gray-text,400,14px)
+  @include generateText($gray-text,400,14px);
 }
 
 
