@@ -1,11 +1,6 @@
 import React from "react";
 import styles from "./Modal.module.scss";
 import classNames from "classnames";
-import axios from "axios";
-
-const onClick = () => {
-  axios.get("http://localhost:5000/user/auth/steam");
-};
 
 const Modal = ({ active, setActive }) => {
   return (
@@ -23,7 +18,7 @@ const Modal = ({ active, setActive }) => {
         <span className={styles.label}>
           You need to be logged in to pick a random retweet
         </span>
-        <a href="http://localhost:5000/auth/steam">Login via steam</a>
+        <a href="http://localhost:8080/auth/steam">Login via steam</a>
       </div>
     </div>
   );

@@ -4,11 +4,12 @@ const cookieParser = require("cookie-parser");
 const passport = require("passport");
 const session = require("cookie-session");
 const SteamStrategy = require("passport-steam").Strategy;
+const jwt = require("jsonwebtoken");
+
 //middlewares
 const ErrorHandler = require("./middlewares/ErrorHandler");
 //Modules
 const giveawaysRoutes = require("./api/routes/giveaways");
-const userRoutes = require("./api/routes/userRouter");
 
 const app = express();
 
@@ -38,13 +39,19 @@ passport.deserializeUser(function (user, done) {
   done(null, user);
 });
 
+const generateJwt = (displayName, id) => {
+  return jwt.sign({ id, displayName }, process.env.SECRET_KEY, {
+    expiresIn: "24h",
+  });
+};
+
 //controllers
 
 passport.use(
   new SteamStrategy(
     {
-      returnURL: "http://localhost:5000/auth/steam/return",
-      realm: "http://localhost:5000/",
+      returnURL: `http://localhost:${process.env.PORT}/auth/steam/return`,
+      realm: `http://localhost:${process.env.PORT}/`,
       apiKey: "C18291F23A166F068103FCF95975589B",
     },
     function (identifier, profile, done) {
@@ -56,18 +63,19 @@ passport.use(
   )
 );
 
-app.get(
-  "/auth/steam",
-  passport.authenticate("steam", {
-    failureRedirect: "/",
-  })
-);
+app.get("/auth/steam", passport.authenticate("steam"));
 
 app.get(
   "/auth/steam/return",
-  passport.authenticate("steam", { successRedirect: "http://localhost:3000/" }),
-  function (req, res) {
-    console.log(res);
+  passport.authenticate("steam"),
+  function ({ user }, res) {
+    if (user) {
+      console.log("user not received");
+    }
+    console.log("req", user);
+    const token = generateJwt(user.displayName, user.id);
+    console.log("jwt", token);
+    res.cookie("jwt", token).redirect("http://localhost:3000");
   }
 );
 
@@ -77,7 +85,7 @@ app.use(passport.session());
 app.use("/giveaways", giveawaysRoutes);
 
 // Errorhandling middleware (as last)
-// app.use(ErrorHandler);
+app.use(ErrorHandler);
 
 app.get("/", (req, res) => {
   res.status(200).json({ message: "working" });
