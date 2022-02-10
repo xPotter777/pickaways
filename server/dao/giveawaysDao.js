@@ -13,7 +13,7 @@ class GiveawaysDAO {
         .collection("giveaways");
     } catch (e) {
       console.error(
-        `Unable to establish a collection handle in moviesDAO: ${e}`
+        `Unable to establish a collection handle in giveawaysDAO: ${e}`
       );
     }
   }
@@ -35,7 +35,7 @@ class GiveawaysDAO {
       console.error(
         `Unable to convert cursor to array or problem counting documents, ${e}`
       );
-      return { giveawaysList: [], totalNumMovies: 0 };
+      return { giveawaysList: [] };
     }
   }
 }

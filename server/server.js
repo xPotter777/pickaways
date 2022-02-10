@@ -6,6 +6,7 @@ const { MongoClient } = require("mongodb");
 const app = require("./app");
 //DAO layers
 const GiveawaysDao = require("./dao/giveawaysDao");
+const UsersDao = require("./dao/usersDao");
 
 const server = http.createServer(app);
 
@@ -23,7 +24,7 @@ mongoClient
   })
   .then(async (client) => {
     await GiveawaysDao.injectDB(client);
-
+    await UsersDao.injectDB(client);
     server.listen(PORT, () => {
       console.log(`SERVER HAS STARTED ON ${PORT}`);
     });
